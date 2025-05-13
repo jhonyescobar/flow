@@ -14,9 +14,7 @@ return new class extends Migration
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('descripcion')->nullable();
-            $table->timestamp('fecha_registro')->useCurrent();
-            $table->timestamp('actualizar_registro')->useCurrentOnUpdate()->nullable();
+            $table->text('descripcion')->nullable();
             $table->timestamps();
         });
     }
