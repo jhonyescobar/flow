@@ -9,7 +9,7 @@
         </div>
         <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
           <div class="overflow-x-auto">
-            <table class="w-full min-w-max">
+            <table class="w-full min-w-max">  
               <thead class="bg-gray-50 dark:bg-gray-700">
                 <tr>
                   <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Nombre</th>

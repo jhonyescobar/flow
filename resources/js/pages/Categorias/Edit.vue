@@ -1,47 +1,49 @@
 <template>
   <div class="container mx-auto px-4 py-8">
     <div class="max-w-2xl mx-auto">
-      <h1 class="text-2xl font-bold mb-6">Editar Categoría</h1>
+      <h1 class="text-3xl font-extrabold text-blue-800 mb-6 flex items-center gap-2">
+        📝 Editar Categoría
+      </h1>
 
-      <form @submit.prevent="submit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">
-            Nombre
+      <form @submit.prevent="submit" class="bg-white dark:bg-gray-800 shadow-lg rounded-xl px-8 pt-6 pb-8 mb-4">
+        <div class="mb-5">
+          <label class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2" for="nombre">
+            🏷️ Nombre
           </label>
           <input
             v-model="form.nombre"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="nombre"
             type="text"
             required
+            class="shadow appearance-none border border-blue-300 rounded w-full py-2 px-3 text-gray-800 dark:text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="descripcion">
-            Descripción
+        <div class="mb-6">
+          <label class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2" for="descripcion">
+            📋 Descripción
           </label>
           <textarea
             v-model="form.descripcion"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="descripcion"
             rows="3"
+            class="shadow appearance-none border border-blue-300 rounded w-full py-2 px-3 text-gray-800 dark:text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400"
           ></textarea>
         </div>
 
         <div class="flex items-center justify-between">
           <Link
             :href="route('categorias.index')"
-            class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full transition-all duration-200"
           >
-            Cancelar
+            ❌ Cancelar
           </Link>
           <button
             type="submit"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             :disabled="form.processing"
+            class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition-all duration-200"
           >
-            Actualizar
+            💾 Actualizar
           </button>
         </div>
       </form>
@@ -71,4 +73,4 @@ const submit = () => {
 export default {
   layout: AppLayout
 }
-</script> 
+</script>

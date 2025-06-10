@@ -5,7 +5,7 @@ import NavUser from '@/components/NavUser.vue';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/vue3';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-vue-next';
+import { BookOpen, Folder, LayoutGrid, User2, UserCog } from 'lucide-vue-next';
 import AppLogo from './AppLogo.vue';
 import { ShoppingCart } from 'lucide-vue-next';
 import { CalendarCog } from 'lucide-vue-next';
@@ -24,12 +24,12 @@ const mainNavItems: NavItem[] = [
         icon: ChartColumnStacked,
     },
     {
-        title: 'Productos',
+        title: 'Platillos',
         href: '/productos',
         icon: ShoppingCart,
     },
     {
-        title: 'Ventas',
+        title: 'Reservas',
         href: '/ventas',
         icon: ShoppingCart,
     },
@@ -37,6 +37,28 @@ const mainNavItems: NavItem[] = [
         title: 'Usuarios',
         href: '/usuarios',
         icon: Users,
+    },
+    {
+        title: 'Reportes',
+        href: '/reportes',
+        icon: Users,
+        children: [
+            {
+                title: 'Por Fecha',
+                href: '/reporte/fecha',
+                icon: Users,
+            },
+            {
+                title: 'Por Cliente',
+                href: '/reporte/cliente',
+                icon: User2,
+            },
+            {
+                title: 'Por Vendedor',
+                href: '/reporte/vendedor',
+                icon: UserCog,
+            },
+        ],
     },
 ];
 
